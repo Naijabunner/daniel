@@ -1,0 +1,155 @@
+.table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.box {
+  border: 1px black solid;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+}
+
+.genbox,
+.gen2 {
+  display: flex;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  grid-column: 2/ span 1;
+  grid-row: 2 / span 1;
+
+}
+
+.icon_1,
+.icon_2,
+.icon_3,
+.icon_4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 10px;
+
+  transition-duration: 1s;
+}
+
+.icon_2 {
+
+  background-color: #f30000;
+
+
+}
+
+.gen2 {
+  grid-column: 3/ span 1;
+  grid-row: 4/ span 1;
+  position: relative;
+}
+
+.icon_3 {
+  background-color: #ffffff;
+
+}
+
+.icon_4 {
+  background-color: #f30000;
+
+}
+
+.tansition_one .icon_1,
+.tansition_one .icon_2 {
+  transform: rotate(90deg);
+}
+
+.transition_two .icon_1 {
+  transform: rotate(180deg);
+}
+
+.transition_three .gen2,
+.transition_five .gen2,
+.transition_four .gen2 {
+  grid-column: 3/ span 1;
+  grid-row: 3/ span 1;
+
+}
+
+.transition_three .genbox,
+.transition_five .genbox,
+.transition_four .genbox {
+  grid-column: 2/ span 1;
+  grid-row: 3/ span 1;
+
+}
+
+.transition_five .genbox,
+.transition_four .genbox {
+  grid-column: 2/ span 2;
+  grid-row: 3/ span 1;
+}
+
+.transition_five .gen2,
+.transition_four .gen2 {
+  grid-column: 2/ span 2;
+  grid-row: 3/ span 1;
+  background: none;
+}
+
+.transition_five .icon_3,
+.transition_four .icon_3 {
+
+  position: absolute;
+
+}
+
+.transition_five .icon_2,
+.transition_four .icon_2 {
+
+  position: absolute;
+
+}
+
+.transition_five .icon_4,
+.transition_four .icon_4 {
+
+  z-index: 5;
+}
+
+.note {
+  display: none;
+}
+
+.transition_five .note {
+  display: block;
+  position: absolute;
+  bottom: -7%;
+}
+
+#blank {
+  width: 100vw;
+  height: 100vh;
+  background-color: aliceblue;
+}
+
+button,
+button a {
+  background: #bbb3b343;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: large;
+  border: none;
+  padding: 2%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn_wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+
+}
