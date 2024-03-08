@@ -21,7 +21,7 @@ function App() {
   }
   const play = () => {
     let i = count;
-    const delay = 100; 
+    const delay = 600; 
   
     const intervalId = setInterval(() => {
       if (i >= 6) {
