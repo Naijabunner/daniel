@@ -1,0 +1,340 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.base_color {
+    background: #ef3507;
+}
+
+.table {
+    border: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.box {
+    border: none;
+    height: 100px;
+}
+
+.genbox,
+.gen2 {
+    display: flex;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-column: 2/ span 1;
+    grid-row: 2 / span 1;
+
+}
+
+.icon_1,
+.icon_2,
+.icon_3,
+.icon_4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    background-color: #ffffff;
+
+    transition-duration: 1s;
+}
+
+.icon_2 {
+
+    background-color: #ef3507;
+
+
+}
+
+.gen2 {
+    grid-column: 3/ span 1;
+    grid-row: 4/ span 1;
+    position: relative;
+}
+
+.icon_3 {
+    background-color: #ffffff;
+
+}
+
+.icon_4 {
+    background-color: #ef3507;
+
+}
+
+.transition_six {
+    opacity: 0.5;
+    transition: all 0.5s ease-out;
+}
+
+
+
+.tansition_one .icon_1,
+.tansition_one .icon_2 {
+    transform: rotate(90deg);
+}
+
+.transition_two .icon_1 {
+    transform: rotate(180deg);
+}
+
+.transition_three .gen2,
+.transition_seven.gen2,
+.transition_six .gen2,
+.transition_five .gen2,
+.transition_four .gen2 {
+    grid-column: 3/ span 1;
+    grid-row: 3/ span 1;
+
+}
+
+.transition_three .genbox,
+.transition_seven.genbox,
+.transition_six .genbox,
+.transition_five .genbox,
+.transition_four .genbox {
+    grid-column: 2/ span 1;
+    grid-row: 3/ span 1;
+
+}
+
+.transition_seven.genbox,
+.transition_six .genbox,
+.transition_five .genbox,
+.transition_four .genbox {
+    grid-column: 2/ span 2;
+    grid-row: 3/ span 1;
+}
+
+.transition_seven.gen2,
+.transition_six .gen2,
+.transition_five .gen2,
+.transition_four .gen2 {
+    grid-column: 2/ span 2;
+    grid-row: 3/ span 1;
+    background: none;
+}
+
+.transition_seven.icon_3,
+.transition_six .icon_3,
+.transition_five .icon_3,
+.transition_four .icon_3 {
+
+    position: absolute;
+
+}
+
+.transition_seven.icon_2,
+.transition_six .icon_2,
+.transition_five .icon_2,
+.transition_four .icon_2 {
+
+    position: absolute;
+
+}
+
+.transition_seven.icon_4,
+.transition_six .icon_4,
+.transition_five .icon_4,
+.transition_four .icon_4 {
+
+    z-index: 5;
+}
+
+.note {
+    transform: translateY(1.5rem);
+    font-size: large;
+    font-style: italic;
+    transition: transform 1s ease;
+}
+
+.note_wrapper {
+    position: absolute;
+    bottom: -7%;
+}
+
+.transition_seven.note,
+.transition_six .note,
+.transition_five .note {
+
+    transform: translateY(-0.2rem);
+}
+
+#blank {
+    width: 100vw;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+button,
+button a {
+    background: #bbb3b343;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: large;
+    border: none;
+    padding: 2%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+
+}
+
+.half_circle {
+    clip-path: circle(50.0% at 48% 100%);
+}
+
+
+/* second slide */
+.tran_one .btn {
+    animation: tran1btn 1s ease forwards;
+}
+
+@keyframes tran1btn {
+    0% {
+        opacity: 0.5;
+        transform: translateY(-3.2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+
+}
+
+.tran_one .logo {
+    overflow: hidden;
+    width: 30px;
+    animation: tran1logo 4s ease forwards;
+
+}
+
+@keyframes tran1logo {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+        height: 30px;
+        width: 30px;
+
+    }
+
+    100% {
+        opacity: 1;
+        width: 100px;
+    }
+
+}
+
+
+.tran_one .bg_text {
+    animation: tran1bg_text 1s ease-in-out forwards;
+}
+
+@keyframes tran1bg_text {
+    0% {
+        transform: translateY(2.3rem);
+        rotate: 5deg;
+    }
+
+    100% {
+        transform: translateY(0rem);
+        rotate: 0deg;
+    }
+
+}
+/* fisrt image */
+.tran_one .img_one {
+
+
+    animation: tran1img 1s ease-in-out forwards;
+}
+
+@keyframes tran1img {
+    0% {
+        transform: translateY(4rem) rotate(-30deg);
+    }
+
+
+    100% {
+        transform: translateY(0rem) rotate(-20deg);
+    }
+}
+
+/* second img */
+.tran_one .img_two {
+
+    animation: tran2img 1s ease-in-out forwards;
+}
+
+@keyframes tran2img {
+    0% {
+        transform: translateY(4rem) rotate(-30deg);
+    }
+
+    100% {
+        transform: translateY(0rem) rotate(-15deg);
+    }
+}
+/* third image */
+.tran_one .img_three {
+
+
+    animation: tran3img 1s ease-in-out forwards;
+}
+
+@keyframes tran3img {
+    0% {
+        transform: translateY(4rem) rotate(-30deg);
+    }
+
+    100% {
+        transform: translateY(0rem) rotate(-10deg);
+    }
+}
+.tran_one .img_four {
+
+
+    animation: tran4img 1s ease-in-out forwards;
+}
+
+@keyframes tran4img {
+    0% {
+        transform: translateY(4rem) rotate(-30deg);
+    }
+
+
+    100% {
+        transform: translateY(0rem) rotate(-5deg);
+    }
+}
+.tran_one .footer{
+    animation: tranfooter 1s ease-in-out forwards;
+}
+@keyframes tranfooter {
+    0% {
+        opacity: 0.5;
+        transform: translateY(2.5rem);
+    }
+
+
+    100% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
