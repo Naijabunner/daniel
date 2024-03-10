@@ -362,7 +362,7 @@ button a {
 
 
     100% {
-        transform: translateY(-27rem) rotate(-21deg);
+        transform: translateY(-50rem) rotate(-22deg);
     }
 }
 
@@ -378,7 +378,7 @@ button a {
     }
 
     100% {
-        transform: translateY(-27rem) rotate(-21deg);
+        transform: translateY(-50rem) rotate(-21deg);
     }
 }
 
@@ -395,7 +395,7 @@ button a {
     }
 
     100% {
-        transform: translateY(-27rem) rotate(-11deg);
+        transform: translateY(-50rem) rotate(-12deg);
     }
 }
 
@@ -413,7 +413,7 @@ button a {
 
 
     100% {     
-           transform: translateY(-27rem) rotate(-6deg);
+           transform: translateY(-50rem) rotate(-7deg);
 
     }
 }
@@ -431,7 +431,7 @@ button a {
 
 
     100% {     
-           transform: translateY(-35rem);
+           transform: translateY(-100%);
 
     }
 }
@@ -728,7 +728,7 @@ button a {
 
 
     100% {     
-           transform: translateY(-35rem);
+           transform: translateY(-100%);
 
     }
 }
@@ -808,6 +808,23 @@ button a {
         opacity:1;
     }
 }
+/* .tran_five .third .au_scroll_one{
+    animation: five_au_scroll_one 1s 0s ease-in-out forwards;
+    
+}
+
+@keyframes five_au_scroll_one{
+    0% {
+       
+        
+        
+    }
+
+    100% {
+        transform: translateY(1%);
+
+    }
+} */
 ::-webkit-scrollbar{
     width: 0;
 }
@@ -817,7 +834,50 @@ button a {
     display: none;
     
 }
+.tran_five .au_scroll_one img{
+    animation: flip 1s linear forwards;
+}
+.tran_five .au_scroll_two img{
+    animation: flip 1s linear forwards;
+}
+@keyframes flip {
+    0% {
+        transform-style: preserve-3d;
+        transform: rotateY(70deg) rotateX(0deg);
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+        opacity: 0.5;
+        filter: blur(5px);
 
 
+      }
+      100% {
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        opacity: 1;
+        filter: blur(1);
+      }
+}
+  
+.tran_six .au_scroll_one {
+    animation: scrollAnimation 10s linear infinite;
+    animation-direction: alternate-reverse;
+  }
 
+  .tran_six .au_scroll_two {
+    animation: scrollAnimation 10s linear infinite;
+    animation-direction: alternate;
+  }
+
+
+  @keyframes scrollAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
 

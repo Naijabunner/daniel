@@ -3,7 +3,20 @@ import img from "../assets/imgTwo.jpg";
 import Navbar from "./Nav";
 const LandingPg = () => {
   const [count, setCount] = useState(1);
+  const sourceArray = [img,img, img];
 
+// Destination arrays
+const bar1 = [img,img, img];
+const bar2 =[img,img, img];
+  const pushElements = () => {
+    for (let i = 0; i < 100; i++) {
+      bar1.push(sourceArray[0]);
+      bar2.push(sourceArray[0]);
+    }
+  };
+  pushElements();
+  console.log("Destination Array 1:", bar1);
+console.log("Destination Array 2:", bar2);
   function transitionGenerator() {
     if (count === 1) {
       return "tran_one";
@@ -34,6 +47,16 @@ const LandingPg = () => {
     else if (count === 12) {
       return "tran_four tran_five";
     }
+    else if (count === 13) {
+      return " tran_five";
+    }
+    else if (count === 14) {
+      return " tran_five  ";
+    }
+    else if (count === 15) {
+      return " tran_five  tran_six";
+    }
+   
     // return "transition_five ";
   }
   useEffect(() => {
@@ -47,7 +70,7 @@ const LandingPg = () => {
     let i = count;
     const delay = 800;
     const intervalId = setInterval(() => {
-      if (i >= 13) {
+      if (i >= 16) {
         clearInterval(intervalId);
       } else {
         setCount(i);
@@ -107,7 +130,7 @@ const LandingPg = () => {
 
 
 
-        <section className="w-screen h-screen second flex flex-col justify-center items-center text-justify ">
+        {<section className="w-screen h-screen second flex flex-col justify-center items-center text-justify ">
             <div className="  flex justify-start items-end   overflow-hidden relative w-[70%]">
             <div className="con flex justify-end items-center ">
                <h2 className="text-[5vw] mr-3 texOne">REVOLUTIONIZING</h2>
@@ -165,7 +188,7 @@ const LandingPg = () => {
             </div>
           </div>
             
-        </section>
+        </section>}
         <section className="w-screen h-screen third flex justify-center items-center ">
           <div className="w-[50%] h-[100vh] flex-col flex justify-center ">
             <div className=" flex items-center justify-start icons">
@@ -197,8 +220,28 @@ const LandingPg = () => {
  </button>
 </div>
           </div>
-          <div className="w-[50%] h-[100vh] flex justify-center items-center text-3xl">
-      <h5 >COMING SOON!! <br /> Abeg</h5>
+          <div className="w-[50%] h-[100vh] flex justify-center items-center text-3xl overflow-hidden ">
+            <div className="flex h-[100vh] w-[25vw] flex-col justify-between items-center au_scroll_one">
+{bar1.map((mg)=>{
+  return(
+    <img src={mg} alt="" className="my-3 w-[90%] h-[40vh] rounded-3xl " />
+
+  )
+})}
+                        
+                        
+
+            </div>
+            <div className="flex h-[100vh] w-[25vw] flex-col justify-between items-center  au_scroll_two">
+            {bar2.map((mg)=>{
+  return(
+    <img src={mg} alt="" className="my-3 w-[90%] h-[40vh] rounded-3xl " />
+
+  )
+})}
+
+            </div>
+
           </div>
 
 
