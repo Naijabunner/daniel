@@ -16,14 +16,23 @@ const LandingPg = () => {
     } else if (count === 5) {
       return "tran_two";
     } else if (count === 6) {
-      return "tran_three ";
+      return "tran_two ";
     } else if (count === 7) {
       return "tran_three ";
     } else if (count === 8) {
-      return "tran_four ";
+      return "tran_three ";
     }
     else if (count === 9) {
+      return "tran_four ";
+    }
+    else if (count === 10) {
+      return "tran_four ";
+    }
+    else if (count === 11) {
       return "tran_four";
+    }
+    else if (count === 12) {
+      return "tran_four tran_five";
     }
     // return "transition_five ";
   }
@@ -36,9 +45,9 @@ const LandingPg = () => {
   // },[])
   const play = () => {
     let i = count;
-    const delay = 1000;
+    const delay = 800;
     const intervalId = setInterval(() => {
-      if (i >= 10) {
+      if (i >= 13) {
         clearInterval(intervalId);
       } else {
         setCount(i);
@@ -53,7 +62,7 @@ const LandingPg = () => {
         className={` h-screen w-screen bg-white main ${transitionGenerator()} overflow-hidden`}
       >
         <Navbar />
-  {count < 8 && (      <div
+  {count < 9 && (      <div
           className={` w-[100%] h-screen flex justify-center items-center overflow-hidden relative ${transitionGenerator()}`}
         >
           <div className=" text-5xl font-bold font-sans overflow-hidden relative">
@@ -156,6 +165,43 @@ const LandingPg = () => {
             </div>
           </div>
             
+        </section>
+        <section className="w-screen h-screen third flex justify-center items-center ">
+          <div className="w-[50%] h-[100vh] flex-col flex justify-center ">
+            <div className=" flex items-center justify-start icons">
+              <p className="bg-gray-400 mx-1  p-1 rounded-full">🚌 </p>
+              <p className="bg-gray-400 mx-1  p-1 rounded-full">🚌 </p>
+              <p className="bg-gray-400 mx-1  p-1 rounded-full">🚌 </p>
+            </div>
+<div className="overflow-hidden last_text">
+  <p className="text-[5vw]">
+    EXPLORE OUR
+  </p>
+</div>
+<div className="overflow-hidden last_text">
+  <p className="text-[5vw]">
+    SERVICE. MAKE
+  </p>
+</div>
+<div className="overflow-hidden last_text">
+  <p className="text-[5vw]">
+   YOUR SMILE SHINE
+  </p>
+</div>
+<div className="">
+ <button className="text-[1rem] m-2 w-[20vw] h-[10vh]  base_color rounded-full border-none text-sm text-white px-2 py-1">
+  some text
+ </button>
+ <button className="text-[1rem] w-[20vw] h-[10vh] m-2 bg-white border-[1px] border-solid rounded-full text-sm border-black px-2 py-1">
+  some text
+ </button>
+</div>
+          </div>
+          <div className="w-[50%] h-[100vh] flex justify-center items-center text-3xl">
+      <h5 >COMING SOON!! <br /> Abeg</h5>
+          </div>
+
+
         </section>
       </main>
     </>
