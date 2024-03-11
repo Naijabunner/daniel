@@ -12,9 +12,9 @@ function App() {
     if (count === 1) {
       return "tansition_one";
     } else if (count === 2) {
-      return "transition_two";
+      return "tansition_one transition_two";
     } else if (count === 3) {
-      return "transition_three";
+      return " transition_three";
     } else if (count === 4) {
       return "transition_four ";
     } else if (count === 5) {
@@ -26,7 +26,6 @@ function App() {
     } else if (count === 8) {
       
     }
-    // return "transition_five ";
   }
   const ScreenGEnerator = () => {
     if (screen === 1) {
@@ -80,42 +79,42 @@ function App() {
   //   }, delay);
   // };
 
-  const counter = () => {
-    if (count < 5) {
-      setCount((cou) => cou + 1);
-    }
-  };
   return (
     <>
       <section
         className={`app ${ScreenGEnerator()}  w-screen h-screen overflow-hidden`}
       >
-        {count <8 && (
-          <main className={`table ${transitionGenerator()}  bg-amber-200 w-screen h-screen overflow-hidden`}>
+         
+         {count <8 && ( <main className={`table ${transitionGenerator()}  bg-amber-200 w-screen h-screen overflow-hidden`}>
             <div className="genbox">
-              <div className="icon_1 text-orange-800">
-                {count > 2 ? "↓" : "↑"}
+              <div className="icon_1 text-orange-800 text-5xl">
+                {/* {count > 2 ? "↓" : "↑"} */} →
               </div>
-              <div className="icon_2  text-orange-200">
-                {count !== 0 ? "↓" : "Hi"}
+              <div className="icon_2  text-orange-200 text-5xl ml-2">
+                <span className="px-3">
+                  
+                </span>
               </div>
             </div>
-            <div className="gen2 ">
-              <div className="icon_3 text-orange-800">
-                {count > 1 ? "↑" : "Hello"}
+            <div className="gen2 text-5xl">
+              <div className="icon_3 text-orange-800 mr-2">
+              <span className="px-3">
+                  
+                </span>
+                
               </div>
-              <div className="icon_4">👱 </div>
+              <div className="icon_4">🦷</div>
               <div className="overflow-hidden note_wrapper ">
-                <p className="note">WELCOME</p>
+                <p className="note ">WELCOME</p>
               </div>
             </div>
 
             {Gridarr.map((entries, index) => {
               return <div key={index} className="box transition-three"></div>;
             })}
-          </main>
-        )}
-        {count === 8?
+          </main>)}
+       
+         {count === 8?
           <LandingPg/>
         :<></>}
       </section>
